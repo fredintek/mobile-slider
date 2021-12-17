@@ -32,7 +32,7 @@ body {
   /* border: 6px solid green; */
 }
 .slide {
-  max-height: 100vh;
+  height: 80%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -77,12 +77,12 @@ body {
   /* background-color: red; */
   /* margin-bottom: 50px; */
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   left: 50vw;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 .circle {
   width: 20px;
