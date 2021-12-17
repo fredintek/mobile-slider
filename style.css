@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html,
+body {
+  background-color: #333;
+  height: 100%;
+  width: 100%;
+  line-height: 1.7;
+  overflow: hidden;
+}
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  height: 100vh;
+  /* width: 100%; */
+  position: relative;
+  /* border: 4px solid yellow; */
+  overflow: hidden;
+}
+.slide-container {
+  height: 100vh;
+  display: inline-flex;
+  transition: transform 0.5s ease-in;
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* border: 6px solid green; */
+}
+.slide {
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  user-select: none;
+  /* border: 3px solid blue; */
+}
+.slide img {
+  max-height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+.slide .btn {
+  margin-top: 10px;
+  padding: 1rem 1.5rem;
+  background-color: #444;
+  text-decoration: none;
+}
+.nav-btn {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: 50%;
+  z-index: 999;
+  transform: translateY(-50%);
+  color: black;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.left-btn {
+  left: 2%;
+}
+.right-btn {
+  right: 68.2%;
+}
+.navigation-btn {
+  height: 50px;
+  width: 300px;
+  /* background-color: red; */
+  /* margin-bottom: 50px; */
+  position: absolute;
+  bottom: 0;
+  left: 50vw;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  margin: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  transition-property: background;
+}
+/* .circle:hover {
+  background: rgb(94, 6, 6);
+} */
+.slide h2 {
+  font-size: 2.5rem;
+}
+.slide h4 {
+  font-size: 1.5rem;
+}
+.active-nav {
+  background: rgb(94, 6, 6);
+}
+.is-hidden {
+  display: none;
+}
+.desktop-version {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: none;
+  }
+  .desktop-version {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 300px;
+    border: 1px solid crimson;
+    /* background-color: red; */
+    /* margin: auto; */
+  }
+  .desktop-version h1 {
+    font-size: 3rem;
+  }
+}
